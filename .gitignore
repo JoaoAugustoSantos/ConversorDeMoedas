@@ -1,0 +1,42 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+packages/
+# Package restore
+*.nuget.props
+*.nuget.targets
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Dotnet Tools
+*.dotnet/
+.dotnet/
+
+# Logs
+*.log
+
+# Publish output
+wwwroot/
+publish/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+.vs/

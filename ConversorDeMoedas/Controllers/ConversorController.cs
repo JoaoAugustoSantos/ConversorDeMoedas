@@ -21,11 +21,11 @@ namespace ConversorDeMoedas.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(ConversorModel model)
+        public async Task<IActionResult> Index(ConversorModel model)
         {
             if (ModelState.IsValid)
             {
-                model.Result = _service.Converter(model.FromCurrency, model.TargetCurrency, model.Value);
+                model.Result = await _service.Converter(model.FromCurrency, model.TargetCurrency, model.Value);
             }
 
             return View(model);

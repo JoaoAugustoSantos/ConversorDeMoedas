@@ -1,3 +1,5 @@
+using ConversorDeMoedas.Services;
+
 namespace ConversorDeMoedas
 {
     public class Program
@@ -5,6 +7,8 @@ namespace ConversorDeMoedas
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddScoped<ConversorService>();
+
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

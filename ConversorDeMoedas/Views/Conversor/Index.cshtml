@@ -12,24 +12,54 @@
             <div style="margin-bottom:15px; text-align:left;">
                 <label style="display:block; font-weight:bold;">Moeda de origem</label>
                 <select asp-for="FromCurrency" class="form-select text-center" style="border-radius:8px; padding:8px;">
-                    <option>USD</option>
-                    <option>BRL</option>
-                    <option>EUR</option>
-                    <option>JPY</option>
-                    <option>GBP</option>
-                    <option>AUD</option>
+                    @foreach (var currency in new Dictionary<string, string>
+                                        {
+                                        {"USD", "Dólar Americano"},
+                                        {"EUR", "Euro"},
+                                        {"JPY", "Iene Japonês"},
+                                        {"GBP", "Libra Esterlina"},
+                                        {"AUD", "Dólar Australiano"},
+                                        {"CAD", "Dólar Canadense"},
+                                        {"CHF", "Franco Suíço"},
+                                        {"CNY", "Renminbi Chinês"},
+                                        {"BRL", "Real Brasileiro"},
+                                        {"INR", "Rupia Indiana"},
+                                        {"MXN", "Peso Mexicano"},
+                                        {"ZAR", "Rand Sul-Africano"},
+                                        {"KRW", "Won Sul-Coreano"},
+                                        {"SGD", "Dólar de Singapura"},
+                                        {"NZD", "Dólar Neozelandês"}
+                                        })
+                    {
+                        <option value="@currency.Key">@currency.Key - @currency.Value</option>
+                    }
                 </select>
             </div>
 
             <div style="margin-bottom:15px; text-align:left;">
                 <label style="display:block; font-weight:bold;">Moeda de destino</label>
                 <select asp-for="TargetCurrency" class="form-select text-center" style="border-radius:8px; padding:8px;">
-                    <option>USD</option>
-                    <option>BRL</option>
-                    <option>EUR</option>
-                    <option>JPY</option>
-                    <option>GBP</option>
-                    <option>AUD</option>
+                    @foreach (var currency in new Dictionary<string, string>
+                                        {
+                                        {"USD", "Dólar Americano"},
+                                        {"EUR", "Euro"},
+                                        {"JPY", "Iene Japonês"},
+                                        {"GBP", "Libra Esterlina"},
+                                        {"AUD", "Dólar Australiano"},
+                                        {"CAD", "Dólar Canadense"},
+                                        {"CHF", "Franco Suíço"},
+                                        {"CNY", "Renminbi Chinês"},
+                                        {"BRL", "Real Brasileiro"},
+                                        {"INR", "Rupia Indiana"},
+                                        {"MXN", "Peso Mexicano"},
+                                        {"ZAR", "Rand Sul-Africano"},
+                                        {"KRW", "Won Sul-Coreano"},
+                                        {"SGD", "Dólar de Singapura"},
+                                        {"NZD", "Dólar Neozelandês"}
+                                        })
+                    {
+                        <option value="@currency.Key">@currency.Key - @currency.Value</option>
+                    }
                 </select>
             </div>
 

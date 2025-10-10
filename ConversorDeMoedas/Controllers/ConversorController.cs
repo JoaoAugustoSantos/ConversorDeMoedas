@@ -16,7 +16,8 @@ namespace ConversorDeMoedas.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var model = new ConversorModel();
+            
+            var model = new ConversorModel() { FromCurrency = "USD", TargetCurrency = "BRL" };
             return View(model);
         }
 
